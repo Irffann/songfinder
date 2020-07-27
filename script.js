@@ -47,6 +47,13 @@
 
      }
  }
+ const input = document.getElementById("searchInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("enter").click();
+  }
+});
 
  const searchBtn = document.querySelector('button')
  searchBtn.addEventListener('click', updateTerm)
